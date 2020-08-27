@@ -25,10 +25,10 @@ class HomePage(models.Model):
     body = models.TextField()
     test = models.OneToOneField(
         "home.CustomText",
-        on_delete=models.SET_DEFAULT,
-        default="FFFF",
         null=True,
         blank=True,
+        default="FFFF",
+        on_delete=models.SET_DEFAULT,
         related_name="homepage_test",
     )
 
